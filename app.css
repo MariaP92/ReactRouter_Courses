@@ -26,6 +26,10 @@ img{
 
 p{
   text-align : justify;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h3{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -34,4 +38,18 @@ li{
   list-style: none;
 }
 
+.secondNav{
+  padding: 5px;
+  background-color: white;
+  border: 0;
+  color: #818080;
+}
 
+.secondNav li:hover{
+  background-color: #818080;
+  color: #818080;
+}
+
+h2{
+  font-family: 'Anton', sans-serif;
+}

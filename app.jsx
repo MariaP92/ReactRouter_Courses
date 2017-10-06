@@ -1,3 +1,4 @@
+"use strict";
 class Home extends React.Component {
   render() {
     return (
@@ -35,7 +36,8 @@ class About extends React.Component {
 class Teachers extends React.Component {
   render() {
     return (
-      <div className="text-center"><h2>Teachers</h2>
+      <div className="text-center">
+        <h2>Teachers</h2>
         <div className="row">
           <div className="col-md-6 col-sm-12 col-xs-12">
             <img src="images/batman.png" alt="batmanProfessor" />
@@ -127,27 +129,34 @@ class Courses extends React.Component {
         break;
     }
     return (
-      <div className="main-content courses">
-
-        <h2>COURSES</h2>
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href='#/courses/html'><span class="glyphicon glyphicon-user"></span>HTML</a></li>
-              <li><a href='#/courses/css'><span class="glyphicon glyphicon-log-in"></span>CSS</a></li>
-              <li><a href='#/courses/javascript'><span class="glyphicon glyphicon-log-in"></span>JAVASCRIPT</a></li>
+      <div classname="main-content courses">
+        <nav className="navbar navbar-inverse secondNav">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <h2>COURSES</h2>
+            </div>
+            <ul className="nav navbar-nav navbar-right">
+              <li>
+                <a href="#/courses/html">HTML</a>
+              </li>
+              <li>
+                <a href="#/courses/css">CSS</a>
+              </li>
+              <li>
+                <a href="#/courses/javascript">JAVASCRIPT</a>
+              </li>
             </ul>
           </div>
         </nav>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12">
+        <div classname="container-fluid">
+          <div classname="row">
+            <div classname="col-md-12 col-sm-12 col-xs-12">
               {CurrentList}
             </div>
           </div>
-
         </div>
       </div>
+
     );
   }
 }

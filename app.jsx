@@ -297,7 +297,7 @@ const Teachers_list= [
   },
   {
     name: "Hulk",
-    description: "Jay is a developer, author of CSS: The Missing Manual, JavaScript & jQuery: The Missing Manual, and web development teacher.",
+    description: "Hulk is a developer, author of CSS: The Missing Manual, JavaScript & jQuery: The Missing Manual, and web development teacher.",
     source: "images/hulk.png",
     id: "teacher_4"
   },

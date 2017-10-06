@@ -84,48 +84,124 @@ class Teachers extends React.Component {
     );
   }
 }
+class CssInfo extends React.Component {
+  render() {
+    return (
+      <div className="row">
+        <div className="col-md-12 col-xs-12 col-sm-12">
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/css/css_basics.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>CSS Basics</h3>
+              <p>CSS (Cascading Style Sheets) is a style sheet language that describes the
+                 presentation of web pages. Whereas HTML is what forms the structure of a
+                 web page, CSS is what we use to style the HTML with colors, backgrounds,
+                 font sizes, layout, and more. As you'll soon learn, CSS is one of the core
+                 technologies for designing and building websites</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/css/css_selectors.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>CSS Selectors</h3>
+              <p>In this course, we're going to go beyond the basic selector concepts covered
+                in CSS Basics. Besides the common ways to select elements with type, ID and
+                class selectors, we're able to target elements based on their attributes,
+                position in the HTML document, even their relation to other elements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+class JavaScriptInfo extends React.Component {
+  render() {
+    return (
+      <div className="row">
+        <div className="col-md-12 col-xs-12 col-sm-12">
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/js/JavaScript_Basics.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>How to Make a Website</h3>
+              <p>JavaScript is a programming language that drives the web: from front-end user interface design,
+                 to backend server-side programming, you'll find JavaScript at every stage of a web site and web 
+                 application. In this course, you'll learn the fundamental programming concepts and syntax of the 
+                 JavaScript programming language.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/js/JavaScript_Basics_Stage5.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>HTML Forms</h3>
+              <p>Storing, tracking and handling data is a large part of computer programming. Arrays provide a 
+                method for storing multiple values into a single variable. That makes an array a convenient way
+                 to pass around a list of items.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+class HTMLInfo extends React.Component {
+  render() {
+    return (
+      <div className="row">
+        <div className="col-md-12 col-xs-12 col-sm-12">
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/html/howtobuildawebsite.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>How to Make a Website</h3>
+              <p>If you’ve never built a website before and you have no coding or design experience,
+                this is the place to start. In this project, we learn how to build a modern portfolio
+                website for desktops, tablets, and mobile devices. We start with basic HTML and CSS syntax.
+                Next, we learn how to build custom web pages with an image gallery and contact page.
+                Finally, we walk through how to share a website live on the web.</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2 col-sm-2 col-xs-2 courses text-center">
+              <img src="images/html/html_forms.png" alt="" />
+            </div>
+            <div className="col-md-9 col-xs-9 col-sm-9">
+              <h3>HTML Forms</h3>
+              <p>The web is a two-way communication medium. There’s lots of HTML elements for displaying
+                 data and producing output, and conversely, there’s also lots of HTML elements for accepting
+                  input. Accepting input from the user means creating web forms. In this course, we’ll learn
+                  about all the most important form elements that web professionals use on a daily basis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 class Courses extends React.Component {
   render() {
     const { route } = this.props;
-    let CurrentList = null;
+    let CurrentList;
     switch (route) {
-
       case 'css':
-        CurrentList = (() => {
-          return (
-            <div>
-              <img src="" alt="" />
-              <h3>How to Make a Website</h3>
-              <p>CSS (Cascading Style Sheets) is a style sheet language that describes the
-                 presentation of web pages. Whereas HTML is what forms the structure of a web
-                  page, CSS is what we use to style the HTML with colors, backgrounds, font
-                  sizes, layout, and more. As you'll soon learn, CSS is one of the core
-                  technologies for designing and building websites.</p>
-            </div>
-          );
-        });
+        CurrentList = CssInfo;
         break;
       case 'javascript':
-        CurrentList = ['How to Make a JS', 'HTML JS'].map((item, index) => {
-          return <li key={index}> {item} </li>
-        });
+        CurrentList = JavaScriptInfo;
         break;
       default: //'html'
-        CurrentList = (() => {
-          return (
-            <div>
-              <img src="" alt="" />
-              <h3>How to Make a Website</h3>
-              <p>If you’ve never built a website before and you have no coding or design
-                experience, this is the place to start. In this project, we learn how to
-                build a modern portfolio website for desktops, tablets, and mobile devices.
-                We start with basic HTML and CSS syntax. Next, we learn how to build custom
-                web pages with an image gallery and contact page. Finally, we walk through
-                how to share a website live on the web.</p>
-            </div>
-          );
-        });
+        CurrentList = HTMLInfo;
         break;
     }
     return (
@@ -151,10 +227,11 @@ class Courses extends React.Component {
         <div classname="container-fluid">
           <div classname="row">
             <div classname="col-md-12 col-sm-12 col-xs-12">
-              {CurrentList}
+              <CurrentList />
             </div>
           </div>
         </div>
+
       </div>
 
     );

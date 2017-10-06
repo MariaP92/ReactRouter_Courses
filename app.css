@@ -53,3 +53,13 @@ li{
 h2{
   font-family: 'Anton', sans-serif;
 }
+
+
+#container-info{
+  padding: 5px 20px;
+}
+
+.courses img{
+  width: 70px;
+  margin-top: 25px;
+}

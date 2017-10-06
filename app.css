@@ -31,7 +31,9 @@ p{
 h3{
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+h2{
+  font-family: 'Anton', sans-serif;
+}
 
 li{
   text-decoration: none;
@@ -50,11 +52,6 @@ li{
   color: #818080;
 }
 
-h2{
-  font-family: 'Anton', sans-serif;
-}
-
-
 #container-info{
   padding: 5px 20px;
 }
@@ -62,4 +59,43 @@ h2{
 .courses img{
   width: 70px;
   margin-top: 25px;
+}
+
+.main-content {
+  padding: 1em 2em;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-top: 3em;
+  }
+  .home a {
+    border-color: #3b80d1;
+  }
+  .media img,
+  .media > div,
+  .teacher {
+    float: left;
+  }
+  .media > div {
+    width: 85.1%;
+    margin-left: 1.5em;
+  } 
+  .teacher {
+    width: 48.73%;
+    margin-bottom: 1.5em;
+  }
+  .teacher + .teacher {
+    margin-left: 2.54%;
+  }
+  .teacher:nth-child(2n+3) {
+    clear: left;
+    margin-left: 0;
+  }
 }
